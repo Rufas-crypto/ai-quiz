@@ -179,6 +179,15 @@ function initQuiz() {
     root.replaceChildren(el("div", "card", message));
   }
 
+  function isAnswered(segId) {
+    const seg = quiz.questions[segId];
+    if (!seg) return false;
+    const raw = readStore(`${STORE_PREFIX}${date}:${segId}`);
+    if (raw === null || raw === "") return false;
+    const picked = Number(raw);
+    return Number.isInteger(picked) && picked >= 0 && picked < seg.choices.length;
+  }
+
   function renderTabs(available) {
     const list = el("div", "segment-tabs");
     available.forEach((seg) => {
@@ -287,17 +296,30 @@ function initQuiz() {
       const others = SEGMENTS.filter(
         (s) => s.id !== active && quiz.questions[s.id] && quiz.questions[s.id].q !== q.q
       );
-      if (others.length) {
+      // Head for a layer the reader has not answered yet. Landing them back on
+      // a question they already finished makes the button feel broken.
+      const nextUp = others.find((s) => !isAnswered(s.id));
+
+      if (nextUp) {
         const next = el("button", "btn btn-ghost", "他の層の問題も解く");
         next.type = "button";
         next.addEventListener("click", () => {
-          active = others[0].id;
+          active = nextUp.id;
           writeStore(SEGMENT_STORE, active);
           renderTabs(SEGMENTS.filter((s) => quiz.questions[s.id]));
           renderQuestion();
           window.scrollTo({ top: 0, behavior: "smooth" });
         });
         actions.append(next);
+      } else if (others.length) {
+        // Nothing left today: send them to the archive rather than a dead end.
+        const archive = el("a", "btn btn-ghost", "過去の問題を見る");
+        archive.href = "archive.html";
+        actions.append(archive);
+      }
+
+      if (!nextUp && others.length) {
+        feedback.append(el("p", "muted small", "この日の問題はすべて解き終わりました。"));
       }
 
       feedback.append(actions);
