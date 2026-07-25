@@ -36,6 +36,17 @@ npx serve ai-quiz
 
 スケジュールタスクは**アプリが起動している間しか動かない**。実行時刻にPCが落ちていた場合は次回起動時に走る。確実に毎日動かしたくなったら GitHub Actions へ移す。
 
+## セキュリティ
+
+- 描画は `textContent` / `createElement` のみ。`innerHTML` は使わない
+- `?date=` / `?level=` は `data/index.json` と `SEGMENTS` のホワイトリストと照合してから使う
+- **`source.url` は `safeHttpUrl()` でスキームを検証してから `href` に入れる。** クイズJSONは検索結果をもとに機械生成され、レビューなしで本番に出るため、URLは信頼できない入力として扱う。http(s) 以外は文字列表示にフォールバックする
+- `vercel.json` でCSPなどのヘッダを付与している
+
+### 広告を入れるときはCSPを緩める必要がある
+
+現在のCSPは `script-src 'self'` なので、**このままではAdSenseのタグが読み込まれない**。広告を入れる段階で、配信元を許可するようCSPを更新すること。ここを忘れると「タグを貼ったのに広告が出ない」で詰まる。
+
 ## 広告
 
 `index.html` / `archive.html` の `.ad-slot` が広告枠。空のときは `display: none` になるので、審査通過後にタグを差し込むだけでよい。

@@ -46,15 +46,41 @@ function el(tag, className, text) {
   return node;
 }
 
+// Quiz JSON is machine-generated nightly from web search results and reaches
+// production without human review, so its URLs are untrusted input. Anything
+// that is not plain http(s) — javascript:, data:, vbscript: — must never reach
+// an href, where a click would execute it.
+function safeHttpUrl(raw) {
+  if (typeof raw !== "string") return null;
+  try {
+    // Parsed without a base on purpose: a source is always an absolute external
+    // URL, so anything relative is malformed and must not become a link.
+    const url = new URL(raw);
+    return url.protocol === "https:" || url.protocol === "http:" ? url.href : null;
+  } catch {
+    return null;
+  }
+}
+
 function sourceLine(source) {
-  if (!source || !source.url) return null;
+  if (!source) return null;
+  const label = source.title || source.url;
+  if (!label) return null;
+
   const p = el("p", "source");
   p.append(document.createTextNode("出典: "));
-  const link = el("a", null, source.title || source.url);
-  link.href = source.url;
-  link.target = "_blank";
-  link.rel = "noopener nofollow";
-  p.append(link);
+
+  const href = safeHttpUrl(source.url);
+  if (href) {
+    const link = el("a", null, label);
+    link.href = href;
+    link.target = "_blank";
+    link.rel = "noopener nofollow";
+    p.append(link);
+  } else {
+    // Keep the attribution visible even when the URL is unusable.
+    p.append(document.createTextNode(label));
+  }
   return p;
 }
 

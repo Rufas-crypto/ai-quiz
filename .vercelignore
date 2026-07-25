@@ -1,0 +1,4 @@
+# Not part of the site — keep these out of the public deployment.
+scripts/
+social/
+README.md
