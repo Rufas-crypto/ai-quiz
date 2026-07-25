@@ -5,7 +5,7 @@
       "q": "Googleの対話AI「Gemini」アプリの月間利用者数は、2026年7月時点で約何人に達したと発表されたでしょう？",
       "choices": ["約9.5億人", "約3億人", "約20億人", "約1億人"],
       "answer": 0,
-      "explanation": "Geminiの月間利用者数は2月の7.5億人から急増し、9.5億人に迫った。同じ時期にChatGPTの世界シェアは初めて5割を切ったとされる。検索エンジンやAndroidスマホに最初から組み込まれているという「土台」の強さが、後発でも急速に追いつける理由の一つだろう。",
+      "explanation": "Geminiの月間利用者数は2月の7.5億人から急増し、9.5億人に迫りました。同じ時期にChatGPTの世界シェアは初めて5割を切ったとされます。検索エンジンやAndroidスマホに最初から組み込まれている「土台」の強さが、後発でも急速に追いつける理由の一つでしょう。",
       "source": {
         "title": "TechCrunch: Google's Gemini nears billion-user milestone",
         "url": "https://techcrunch.com/2026/07/23/google-closes-in-on-another-billion-user-product-with-gemini/"
@@ -15,7 +15,7 @@
       "q": "Alphabet(Google親会社)は2026年7月の決算で、2026年通期の設備投資見込みを最大いくらに引き上げたでしょう？",
       "choices": ["950億~1,050億ドル", "1,950億~2,050億ドル", "2,950億~3,050億ドル", "195億~205億ドル"],
       "answer": 1,
-      "explanation": "AlphabetはAI需要への対応として、2026年の設備投資見通しを最大2050億ドルまで引き上げた。4月時点の想定(最大1900億ドル)からさらに上振れし、クラウド部門の受注残高も過去最高となった。好業績にもかかわらず株価が下落したのは、投資家が「儲かっているのに投資額の増加が止まらない」点を嫌気したためだ。",
+      "explanation": "AlphabetはAI需要への対応として、2026年の設備投資見通しを最大2050億ドルへ引き上げました。4月時点の想定(最大1900億ドル)からさらに上振れし、クラウド部門の受注残高も過去最高です。好業績でも株価が下落したのは、「儲かっているのに投資額の増加が止まらない」点を投資家が嫌気したためと見られます。",
       "source": {
         "title": "CNBC: Alphabet earnings takeaways: Q2 revenue beats, GOOGL stock sinks on 2026 capex hike",
         "url": "https://www.cnbc.com/2026/07/22/google-earnings-q2-goog-live-updates.html"
@@ -25,7 +25,7 @@
       "q": "2026年7月24日、NVIDIAやMicrosoft、Metaなど25社が「オープンウェイトモデル」の重要性を訴える共同書簡に署名しました。名を連ねなかった企業はどこでしょう？",
       "choices": ["OpenAI・Anthropic・Google", "IBM・Dell・Mozilla", "Palantir・Hugging Face", "Mistral・Perplexity"],
       "answer": 0,
-      "explanation": "書簡は「オープンウェイトモデルを育てなければ米国のAI主導権は保てない」と訴えるもので、NVIDIAのJensen Huang氏が自身初のX投稿で拡散した。MetaやMistralは名を連ねる一方、最先端モデルを非公開で提供するOpenAI・Anthropic・Googleは加わらなかった。「閉じた最強モデル」と「開かれた裾野」のどちらを取るかで、業界の立ち位置が分かれた出来事だった。",
+      "explanation": "書簡はオープンウェイトモデルの育成が米国のAI主導権に不可欠だと訴えるもので、NVIDIAのJensen Huang氏が自身初のX投稿で広めました。MetaやMistralが署名する一方、最先端モデルを非公開で提供するOpenAI・Anthropic・Googleは加わっていません。「閉じた最強モデル」と「開かれた裾野」のどちらを取るかで立ち位置が分かれた出来事です。",
       "source": {
         "title": "Tom's Hardware: Nvidia and 24 other companies sign open-weights letter as Washington weighs Chinese AI model ban — OpenAI, Anthropic, and Google absent from the list",
         "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/nvidia-and-24-other-companies-sign-open-weights-letter-as-washington-weighs-chinese-ai-model-ban"
@@ -35,7 +35,7 @@
       "q": "中国Moonshot AIが2026年7月16日に発表した大規模言語モデル「Kimi K3」の総パラメータ数はどれでしょう？",
       "choices": ["約28億", "約280億", "約2,800億", "約2兆8,000億"],
       "answer": 3,
-      "explanation": "Kimi K3は総パラメータ数2.8兆(2.8T)のMoEモデルで、896個のエキスパートのうち1トークンあたり16個だけを活性化する設計になっている。オープンウェイト級としては最大級とされ、Artificial Analysis Intelligence Indexでも57点とOpus 4.8やGPT-5.5に匹敵する。巨大化させつつ動かす部分は疎にし、計算コストを抑える設計思想が読み取れる。",
+      "explanation": "Kimi K3は総パラメータ2.8兆のMoEモデルで、896個のエキスパートのうち1トークンあたり16個だけを活性化します。オープンウェイトとしては最大級とされ、Artificial Analysis Intelligence Indexでも57点とOpus 4.8やGPT-5.5に並びます。巨大化させつつ動かす部分は疎に保ち、計算コストを抑える設計です。",
       "source": {
         "title": "VentureBeat: China's Moonshot AI releases Kimi K3, the largest open-source model ever, rivaling top U.S. systems",
         "url": "https://venturebeat.com/technology/chinas-moonshot-ai-releases-kimi-k3-the-largest-open-source-model-ever-rivaling-top-u-s-systems"
