@@ -179,6 +179,23 @@ function initQuiz() {
 
     const card = el("div", "card");
     card.append(el("p", "level-badge", `${segmentLabel(active)}向け`));
+
+    // When material is thin the generator reuses one question across adjacent
+    // layers. Detect that here so the reader knows why a tab repeats itself,
+    // and so the generator has nothing extra to keep in sync.
+    const sharedWith = SEGMENTS.filter(
+      (s) => s.id !== active && quiz.questions[s.id] && quiz.questions[s.id].q === q.q
+    );
+    if (sharedWith.length) {
+      card.append(
+        el(
+          "p",
+          "shared-note",
+          `この問題は${sharedWith.map((s) => s.label).join("・")}向けと共通です。`
+        )
+      );
+    }
+
     card.append(el("p", "question", q.q));
 
     const choices = el("div", "choices");
@@ -239,7 +256,11 @@ function initQuiz() {
       share.rel = "noopener";
       actions.append(share);
 
-      const others = SEGMENTS.filter((s) => s.id !== active && quiz.questions[s.id]);
+      // Skip layers sharing this exact question — sending the reader to an
+      // identical question would look broken.
+      const others = SEGMENTS.filter(
+        (s) => s.id !== active && quiz.questions[s.id] && quiz.questions[s.id].q !== q.q
+      );
       if (others.length) {
         const next = el("button", "btn btn-ghost", "他の層の問題も解く");
         next.type = "button";

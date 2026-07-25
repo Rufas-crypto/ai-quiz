@@ -183,6 +183,12 @@ body {
   font-weight: 700;
 }
 
+.shared-note {
+  margin: -4px 0 10px;
+  color: var(--text-dim);
+  font-size: 0.78rem;
+}
+
 .card {
   background: var(--surface);
   border: 1px solid var(--border);
