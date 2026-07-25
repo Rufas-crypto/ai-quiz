@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>今日のAIクイズ | 毎日1問・AIニュース4択クイズ</title>
+    <meta
+      name="description"
+      content="前日のAIニュースから作った4択クイズを毎日1問だけ出題。学生・一般企業・IT企業・IT技術者の4レベルから選べます。登録不要、通勤通学のすきま時間に30秒。"
+    />
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body data-page="quiz">
+    <header class="site-header">
+      <div class="wrap">
+        <a class="logo" href="index.html">今日の<span>AIクイズ</span></a>
+        <nav class="site-nav">
+          <a href="archive.html">過去の問題</a>
+          <a href="about.html">このサイト</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <div class="hero">
+        <h1>昨日のAIニュースから、毎日1問</h1>
+        <p class="quiz-date" id="quiz-date">読み込み中…</p>
+        <p class="stale-notice hidden" id="stale-notice"></p>
+      </div>
+
+      <div class="ad-slot" id="ad-top"></div>
+
+      <div id="segment-tabs"></div>
+      <div id="quiz-root"></div>
+
+      <div class="ad-slot" id="ad-bottom"></div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <span>&copy; 今日のAIクイズ</span>
+        <span>
+          <a href="about.html">このサイトについて</a> ・
+          <a href="privacy.html">プライバシーポリシー</a>
+        </span>
+      </div>
+    </footer>
+
+    <script src="assets/app.js"></script>
+  </body>
+</html>

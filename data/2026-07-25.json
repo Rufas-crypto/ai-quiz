@@ -1,0 +1,55 @@
+{
+  "date": "2026-07-25",
+  "questions": {
+    "student": {
+      "q": "7月24日、Metaが米国で公開した出品者向けアプリ「Seller」では、商品の写真を1枚アップロードするとAIがあるものを自動で下書きしてくれます。それは何でしょう？",
+      "choices": [
+        "出品タイトル・説明文・価格・カテゴリ",
+        "商品の3Dモデル",
+        "購入者からのレビュー",
+        "配送業者との通話音声"
+      ],
+      "answer": 0,
+      "explanation": "SellerはFacebook Marketplaceの出品者専用アプリで、アップロードした写真からMeta AIがタイトル・説明文・価格・カテゴリ・配送ラベルの下書きを作ります。「文章を考えるのが面倒」という手間をAIに任せる、身近な生成AIの応用例です。",
+      "source": {
+        "title": "Engadget: Meta launches a storefront platform through Facebook Marketplace",
+        "url": "https://www.engadget.com/2222363/meta-launches-storefront-platform-facebook-marketplace-seller/"
+      }
+    },
+    "business": {
+      "q": "ガートナーが2026年7月に公表した予測では、世界のAIプラットフォーム／モデル市場は2026年にどれくらい成長する見込みとされているでしょう？",
+      "choices": ["約13%", "約33%", "約63%", "約103%"],
+      "answer": 2,
+      "explanation": "ガートナーは同市場が2026年に63%成長すると予測しています。企業のIT予算がAIのソフトウェア基盤へ急速に移りつつあることを示す数字で、社内でAI関連の稟議を通す際の裏付けとしても使える指標です。",
+      "source": {
+        "title": "Solutions Review: AI News for the Week of July 24",
+        "url": "https://solutionsreview.com/ai-news-for-the-week-of-july-24-updates-from-booz-allen-gartner-microsoft-more/"
+      }
+    },
+    "it": {
+      "q": "7月24日、決済大手のStripeが約100億ドル規模での買収交渉を進めていると報じられた企業はどこでしょう？",
+      "choices": ["OpenRouter", "Hugging Face", "Replicate", "LangChain"],
+      "answer": 0,
+      "explanation": "WSJの報道によると、StripeはAIモデルのマーケットプレイスOpenRouterを約100億ドルの評価額で買収する交渉を進めています。OpenRouterは同年5月の調達時点では13億ドル評価だったため、数か月で約8倍という計算になります。決済インフラ企業がAIインフラ側へ踏み込む動きとして注目されています。",
+      "source": {
+        "title": "Axios: AI currency driving Stripe's OpenRouter move",
+        "url": "https://www.axios.com/2026/07/24/stripe-openrouter-merger-ai-currency"
+      }
+    },
+    "engineer": {
+      "q": "Stripeによる買収交渉が報じられたOpenRouterが、開発者に提供している中心的な機能はどれでしょう？",
+      "choices": [
+        "複数プロバイダのモデルを単一インターフェースで呼び出し、比較・切り替え・ルーティングできる",
+        "GPUクラスタを時間貸しするベアメタル基盤",
+        "学習データセットのライセンス管理と権利処理",
+        "モデル量子化に特化した専用コンパイラ"
+      ],
+      "answer": 0,
+      "explanation": "OpenRouterはOpenAI・Anthropicやオープンウェイト系を含む数百のモデルを1つのインターフェースから扱えるようにするサービスで、500万人以上の開発者が利用しているとされます。プロバイダごとに個別の統合を書かずに、モデルの比較・切り替え・リクエストのルーティングができる点が価値の中心です。",
+      "source": {
+        "title": "TNW: Stripe in talks to buy OpenRouter for about $10bn",
+        "url": "https://thenextweb.com/news/stripe-openrouter-10-billion-ai-model-marketplace-acquisition"
+      }
+    }
+  }
+}
