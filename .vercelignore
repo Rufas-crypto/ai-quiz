@@ -1,4 +1,6 @@
 # Not part of the site — keep these out of the public deployment.
+# reports/ holds security findings and must never be publicly served.
 scripts/
 social/
+reports/
 README.md
