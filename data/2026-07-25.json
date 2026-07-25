@@ -45,7 +45,7 @@
         "モデル量子化に特化した専用コンパイラ"
       ],
       "answer": 0,
-      "explanation": "OpenRouterはOpenAI・Anthropicやオープンウェイト系を含む数百のモデルを1つのインターフェースから扱えるようにするサービスで、500万人以上の開発者が利用しているとされます。プロバイダごとに個別の統合を書かずに、モデルの比較・切り替え・リクエストのルーティングができる点が価値の中心です。",
+      "explanation": "モデルを乗り換えるたびに、プロバイダごとのSDK・認証・リクエスト形式の差異を実装し直すのが従来の手間でした。OpenRouterはその差異を単一のAPIの背後に隠すため、コードをほぼ変えずにモデルを差し替えたり、コストや可用性に応じて振り先を変えたりできます。高い評価額がついたのは、この「乗り換えコストを下げる位置」を押さえているからだと読めます。",
       "source": {
         "title": "TNW: Stripe in talks to buy OpenRouter for about $10bn",
         "url": "https://thenextweb.com/news/stripe-openrouter-10-billion-ai-model-marketplace-acquisition"
